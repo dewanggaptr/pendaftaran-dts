@@ -21,7 +21,7 @@ services:
     container_name: pendaftaran-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: db-pendaftaran
+      MYSQL_DATABASE: gallery
       MYSQL_ROOT_PASSWORD:
       MYSQL_PASSWORD:
       MYSQL_USER: root
