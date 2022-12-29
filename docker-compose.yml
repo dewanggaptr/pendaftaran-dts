@@ -8,7 +8,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     image: gallery
-    container_name: gallery-app
+    container_name: pendaftaran-app
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
@@ -18,10 +18,10 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: gallery-db
+    container_name: pendaftaran-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: gallery
+      MYSQL_DATABASE: db-pendaftaran
       MYSQL_ROOT_PASSWORD:
       MYSQL_PASSWORD:
       MYSQL_USER: root
@@ -34,7 +34,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: gallery-nginx
+    container_name: pendaftaran-nginx
     restart: unless-stopped
     ports:
       - 8000:80
